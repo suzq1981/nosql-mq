@@ -32,6 +32,9 @@ public class KafkaProducerCharpter2 {
 		config.put(ProducerConfig.PARTITIONER_CLASS_CONFIG, DefaultPartitioner.class.getName());
 		// 设置集群地址
 		config.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, brokerList);
+		//幂等性，使一个主题的一个分区中消息不会重复发送，
+		//所以为了避免发送重复消息，key就非常重要，因为分区是根据key来指定的
+		config.put(ProducerConfig.ENABLE_IDEMPOTENCE_CONFIG, true);//默认为true
 		
 		List<String> interceptors = new ArrayList<String>();
 		interceptors.add("com.badou.mqnosql.kafka.base.interceptor.ProducerInterceptor4User");

@@ -13,7 +13,7 @@ import org.apache.kafka.clients.producer.ProducerConfig;
 
 public class KafkaConsumerCharpter2 {
 
-	private static final String brokerList = "192.168.2.200:9092";
+	private static final String brokerList = "192.168.2.200:9092,192.168.2.200:9093,192.168.2.200:9094";
 	private static final String heimaTopic = "heima";
 	private static final String groupId = "WilliamGroup";
 
@@ -50,7 +50,8 @@ public class KafkaConsumerCharpter2 {
 					ConsumerRecords<String, String> records = consumer3.poll(Duration.ofMillis(2000));
 					if (records.count() > 0) {
 						for (ConsumerRecord<String, String> record : records) {
-							System.out.println(Thread.currentThread().getName() + ": " + record.value());
+							System.out.println(Thread.currentThread().getName() + ": partition:" + record.partition()
+									+ "," + record.value());
 						}
 					}
 				}
@@ -65,7 +66,8 @@ public class KafkaConsumerCharpter2 {
 					ConsumerRecords<String, String> records = consumer2.poll(Duration.ofMillis(2000));
 					if (records.count() > 0) {
 						for (ConsumerRecord<String, String> record : records) {
-							System.out.println(Thread.currentThread().getName() + ": " + record.value());
+							System.out.println(Thread.currentThread().getName() + ": partition:" + record.partition()
+									+ "," + record.value());
 						}
 					}
 				}
