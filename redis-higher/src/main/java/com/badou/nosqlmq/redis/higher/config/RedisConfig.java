@@ -1,4 +1,4 @@
-package com.badou.senior.redis.config;
+package com.badou.nosqlmq.redis.higher.config;
 
 import org.springframework.cache.annotation.CachingConfigurerSupport;
 import org.springframework.cache.annotation.EnableCaching;

@@ -1,4 +1,4 @@
-package com.badou.senior.redis.controller;
+package com.badou.nosqlmq.redis.higher.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
