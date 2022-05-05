@@ -2,8 +2,9 @@
 <configuration debug="true" scan="true" scanPeriod="1 seconds">
 
     <contextName>logback</contextName>
+    <property name="scheduler.manager.server.home" value="D:" />
     <!--定义参数,后面可以通过${app.name}使用-->
-    <property name="app.name" value="logback_test"/>
+    <property name="app.name" value="redis-base"/>
     <!--ConsoleAppender 用于在屏幕上输出日志-->
     <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
         <!--定义了一个过滤器,在LEVEL之下的日志输出不会被打印出来-->
