@@ -1,4 +1,4 @@
-package com.badou.mqnosql.kafka.base.charpter1;
+package com.badou.nosqlmq.kafka.base.charpter1;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +12,7 @@ import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.clients.producer.RecordMetadata;
 import org.apache.kafka.clients.producer.internals.DefaultPartitioner;
 
-import com.badou.mqnosql.kafka.base.model.User;
+import com.badou.nosqlmq.kafka.base.model.User;
 
 public class HelloKafkaProducer {
 

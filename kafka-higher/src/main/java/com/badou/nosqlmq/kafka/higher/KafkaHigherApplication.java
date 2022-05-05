@@ -1,4 +1,4 @@
-package com.badou.mqnosql.kafka.higher;
+package com.badou.nosqlmq.kafka.higher;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

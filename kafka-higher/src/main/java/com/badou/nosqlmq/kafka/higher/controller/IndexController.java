@@ -1,4 +1,4 @@
-package com.badou.mqnosql.kafka.higher.controller;
+package com.badou.nosqlmq.kafka.higher.controller;
 
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.badou.mqnosql.kafka.higher.controller;
+package com.badou.nosqlmq.kafka.higher.controller;
 
 import javax.management.MBeanServerConnection;
 import javax.management.ObjectName;

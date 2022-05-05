@@ -1,4 +1,4 @@
-package com.badou.mqnosql.kafka.base.model;
+package com.badou.nosqlmq.kafka.base.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

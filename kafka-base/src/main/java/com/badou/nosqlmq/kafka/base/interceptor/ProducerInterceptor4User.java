@@ -1,4 +1,4 @@
-package com.badou.mqnosql.kafka.base.interceptor;
+package com.badou.nosqlmq.kafka.base.interceptor;
 
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
@@ -7,7 +7,7 @@ import org.apache.kafka.clients.producer.ProducerInterceptor;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.clients.producer.RecordMetadata;
 
-import com.badou.mqnosql.kafka.base.model.User;
+import com.badou.nosqlmq.kafka.base.model.User;
 
 public class ProducerInterceptor4User implements ProducerInterceptor<String, User> {
 

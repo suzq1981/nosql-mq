@@ -1,4 +1,4 @@
-package com.badou.mqnosql.kafka.base.charpter1;
+package com.badou.nosqlmq.kafka.base.charpter1;
 
 import java.time.Duration;
 import java.util.Arrays;

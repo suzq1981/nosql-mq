@@ -1,4 +1,4 @@
-package com.badou.mqnosql.kafka.base.serializer;
+package com.badou.nosqlmq.kafka.base.serializer;
 
 import java.io.IOException;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package com.badou.mqnosql.kafka.base.charpter2;
+package com.badou.nosqlmq.kafka.base.charpter2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,8 +13,8 @@ import org.apache.kafka.clients.producer.RecordMetadata;
 import org.apache.kafka.clients.producer.internals.DefaultPartitioner;
 import org.apache.kafka.common.serialization.StringSerializer;
 
-import com.badou.mqnosql.kafka.base.model.User;
-import com.badou.mqnosql.kafka.base.serializer.JsonSerializer;
+import com.badou.nosqlmq.kafka.base.model.User;
+import com.badou.nosqlmq.kafka.base.serializer.JsonSerializer;
 
 public class KafkaProducerTransaction {
 
