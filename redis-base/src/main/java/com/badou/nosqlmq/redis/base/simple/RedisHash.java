@@ -53,7 +53,7 @@ public class RedisHash {
 		jedis.hincrBy("news", "count", 10);
 
 		Map<String, String> map = new HashMap<>();
-		map.put("author", "William");
+		map.put("author", "Godson");
 		map.put("publish", "CN");
 
 		// 同时将多个 field-value (域-值)对设置到哈希表 key 中。
@@ -85,21 +85,21 @@ public class RedisHash {
 		Map<String, String> allMap = jedis.hgetAll("news");
 		logger.info(allMap.toString());
 
-		for (int i = 1; i < 1000; i++) {
+		for (int i = 1; i <= 1000; i++) {
 			jedis.hsetnx("news", "k" + i, "v" + i);
 		}
 
-		ScanParams params = new ScanParams().match("k*");
+		ScanParams params = new ScanParams().count(100).match("k*");
+		ScanResult<Entry<String, String>> scan;
+		long totalSize = 0;
+		String cursor = "";
+		while (!cursor.equals("0")) {
+			scan = jedis.hscan("news", cursor, params);
+			cursor = scan.getStringCursor();
+			totalSize += scan.getResult().size();
+		}
+		System.out.println("总记录数=" + totalSize);
 
-		ScanResult<Entry<String, String>> scan = jedis.hscan("news", "0", params);
-		long count = 0;
-
-		do {
-			count += scan.getResult().size();
-			scan = jedis.hscan("news", scan.getStringCursor(),params);
-		} while (!scan.getStringCursor().equals("0"));
-
-		System.out.println("count=" + count);
 		jedis.close();
 	}
 }
