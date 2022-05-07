@@ -88,11 +88,13 @@ public class RedisHash {
 		for (int i = 1; i <= 1000; i++) {
 			jedis.hsetnx("news", "k" + i, "v" + i);
 		}
-
+		
+		//每次返回来就100左右，有时会超过100
 		ScanParams params = new ScanParams().count(100).match("k*");
 		ScanResult<Entry<String, String>> scan;
 		long totalSize = 0;
 		String cursor = "";
+		
 		while (!cursor.equals("0")) {
 			scan = jedis.hscan("news", cursor, params);
 			cursor = scan.getStringCursor();
